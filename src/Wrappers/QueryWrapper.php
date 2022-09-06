@@ -1,5 +1,5 @@
 <?php
-namespace LangleyFoxall\XeroLaravel\Wrappers;
+namespace Bespoke\XeroLaravel\Wrappers;
 
 use Illuminate\Support\Collection;
 use XeroPHP\Application;
@@ -7,7 +7,7 @@ use XeroPHP\Remote\Query;
 
 /**
  * Class QueryWrapper
- * @package LangleyFoxall\XeroLaravel
+ * @package Bespoke\XeroLaravel
  */
 class QueryWrapper
 {

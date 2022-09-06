@@ -1,6 +1,6 @@
 <?php
 
-namespace LangleyFoxall\XeroLaravel;
+namespace Bespoke\XeroLaravel;
 
 use Calcinai\OAuth2\Client\Provider\Xero as Provider;
 use Calcinai\OAuth2\Client\XeroTenant;
@@ -8,8 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use InvalidArgumentException;
-use LangleyFoxall\XeroLaravel\Exceptions\InvalidOAuth2StateException;
-use LangleyFoxall\XeroLaravel\Exceptions\InvalidXeroRequestException;
+use Bespoke\XeroLaravel\Exceptions\InvalidOAuth2StateException;
+use Bespoke\XeroLaravel\Exceptions\InvalidXeroRequestException;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessTokenInterface;
 
@@ -41,7 +41,7 @@ class OAuth2
         $config = config(Constants::CONFIG_KEY);
 
         if (!isset($config['apps'][$key])) {
-            throw new InvalidArgumentException('Invalid app key specified. Please check your `xero-laravel-lf` configuration file.');
+            throw new InvalidArgumentException('Invalid app key specified. Please check your `xero-laravel` configuration file.');
         }
 
         $app = $config['apps'][$key];
@@ -126,11 +126,12 @@ class OAuth2
     /**
      * Refreshes an access token, and returns the new access token.
      *
-     * @param AccessTokenInterface $accessToken
-     * @param string|null $grantType
+     * @param  AccessTokenInterface  $accessToken
+     * @param  string|null           $grantType
      * @return AccessTokenInterface
+     * @throws IdentityProviderException
      */
-    public function refreshAccessToken(AccessTokenInterface $accessToken, string? $grantType = null)
+    public function refreshAccessToken(AccessTokenInterface $accessToken, ?string $grantType = null)
     {
         $body = [
             'refresh_token' => $accessToken->getRefreshToken()

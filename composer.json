@@ -1,6 +1,6 @@
 {
-    "name": "langleyfoxall/xero-laravel",
-    "description": "💸 Access the Xero accounting system using an Eloquent-like syntax",
+    "name": "bespoke/xero-laravel",
+    "description": "💸 Access the Xero accounting system using an Eloquent-like syntax, forked from the great langleyfoxall",
     "type": "library",
     "license": "LGPL-3.0-only",
     "keywords": [
@@ -17,20 +17,20 @@
     },
     "autoload": {
         "psr-4": {
-            "LangleyFoxall\\XeroLaravel\\": "src/"
+            "Bespoke\\XeroLaravel\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Jordan Hall",
-            "email": "jordan@langleyfoxall.co.uk",
+            "name": "Bespoke Support",
+            "email": "support@bespokeuk.com",
             "role": "Maintainer"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "LangleyFoxall\\XeroLaravel\\Providers\\XeroLaravelServiceProvider"
+                "Bespoke\\XeroLaravel\\Providers\\XeroLaravelServiceProvider"
             ]
         }
     }

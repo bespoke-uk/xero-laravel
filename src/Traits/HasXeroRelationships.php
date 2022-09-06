@@ -1,13 +1,13 @@
 <?php
 
-namespace LangleyFoxall\XeroLaravel\Traits;
+namespace Bespoke\XeroLaravel\Traits;
 
 use BadMethodCallException;
 use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use LangleyFoxall\XeroLaravel\Utils;
-use LangleyFoxall\XeroLaravel\Wrappers\QueryWrapper;
+use Bespoke\XeroLaravel\Utils;
+use Bespoke\XeroLaravel\Wrappers\QueryWrapper;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
