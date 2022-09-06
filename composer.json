@@ -1,5 +1,5 @@
 {
-    "name": "bespoke/xero-laravel",
+    "name": "bespoke-uk/xero-laravel",
     "description": "💸 Access the Xero accounting system using an Eloquent-like syntax, forked from the great langleyfoxall",
     "type": "library",
     "license": "LGPL-3.0-only",
